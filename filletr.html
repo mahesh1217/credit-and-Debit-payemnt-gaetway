@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="./fillter.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+<link rel="stylesheet" type="text/css" href="./DatPayment.css">
+<link rel="stylesheet" type="text/css" href="./example.css">
+</head>
+<body>
+
+<h1 style="margin-left: 160px;color: green">Payment Methods</h1>
+
+<div id="myBtnContainer">
+ <!----<button class="btn active" onclick="filterSelection('all')"> Show all</button>---->
+  <button class="btn" onclick="filterSelection('cars')"><span style="font-size: 18px;font-weight:bold">Credit Card</span></button>
+  <button class="btn" onclick="filterSelection('animals')"><span style="font-size: 15px;font-weight:bold">Internet Banking</span></button>
+  <button class="btn" onclick="filterSelection('fruits')"><span style="font-size: 18px;font-weight:bold">Debit Card</span></button>
+  <button class="btn" onclick="filterSelection('colors')"><span style="font-size: 18px;font-weight:bold">PayPal</span></button>
+</div>
+
+  <div class="filterDiv cars">
+  <br>
+  <br>
+    <form action="/" method="POST" id="payment-form" class="datpayment-form">
+      <div class="dpf-title">
+          Payment Details
+          <div class="accepted-cards-logo"></div>
+      </div>
+      <div class="dpf-card-placeholder"></div>
+      <div class="dpf-input-container">
+          <div class="dpf-input-row">
+              <label class="dpf-input-label">Credit Card Number</label>
+              <div class="dpf-input-container with-icon">
+                  <span class="dpf-input-icon"><i class="fa fa-credit-card" aria-hidden="true"></i></span>
+                  <input type="text" class="dpf-input" size="20" data-type="number">
+              </div>
+          </div>
+
+          <div class="dpf-input-row">
+              <div class="dpf-input-column">
+                  <input type="hidden" size="2" data-type="exp_month" placeholder="MM">
+                  <input type="hidden" size="2" data-type="exp_year" placeholder="YY">
+
+                  <label class="dpf-input-label">Expiry Date</label>
+                  <div class="dpf-input-container">
+                      <input type="text" class="dpf-input" data-type="expiry">
+                  </div>
+              </div>
+              <div class="dpf-input-column">
+                  <label class="dpf-input-label">CVV</label>
+                  <div class="dpf-input-container">
+                      <input type="text" class="dpf-input" size="4" data-type="cvc">
+                  </div>
+              </div>
+          </div>
+
+          <div class="dpf-input-row">
+              <label class="dpf-input-label">Card Holder Name</label>
+              <div class="dpf-input-container">
+                  <input type="text" size="4" class="dpf-input" data-type="name">
+              </div>
+          </div>
+
+          <button type="submit" class="dpf-submit">
+                  <span class="btn-active-state">
+                      Payment
+                  </span>
+                  <span class="btn-loading-state">
+                      <i class="fa fa-refresh "></i>
+                  </span>
+          </button>
+      </div>
+  </form>
+
+  
+  <pre id="demo-log"></pre>  
+     
+
+  </div>
+
+ 
+  <div class="filterDiv animals">
+    <div class="container">
+    <br>
+      <br>
+      <div class="payment-info">
+          <h3>Net Banking</h3>
+          <div class="radio-btns">
+              <div class="swit">								
+                  <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio" checked=""><i></i>Andhra Bank</label> </div></div>
+                  <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Allahabad Bank</label> </div></div>
+                  <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Bank of Baroda</label> </div></div>
+                  <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Canara Bank</label> </div></div>	
+                  <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>IDBI Bank</label> </div></div>
+                  <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Icici Bank</label> </div></div>	
+                  <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Indian Overseas Bank</label> </div></div>	
+                  <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Punjab National Bank</label> </div></div>	
+                  <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>South Indian Bank</label> </div></div>
+                  <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>State Bank Of India</label> </div></div>		
+              </div>
+              <div class="swit">								
+                  <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>City Union Bank</label> </div></div>
+                  <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>HDFC Bank</label> </div></div>
+                  <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>IndusInd Bank</label> </div></div>
+                  <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Syndicate Bank</label> </div></div>
+                  <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Deutsche Bank</label> </div></div>	
+                  <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Corporation Bank</label> </div></div>
+                  <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>UCO Bank</label> </div></div>	
+                  <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Indian Bank</label> </div></div>	
+                  <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Federal Bank</label> </div></div>	
+                  <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>ING Vysya Bank</label> </div></div>	
+              </div>
+              <a class="btn" href="#" style="text-decoration: none;background-color:lightseagreen">Continue</a>
+
+          </div>  
+         
+      </div>
+  </div>
+  </div>
+
+  <div class="filterDiv fruits">
+  <br>
+  <br>
+    <form action="/" method="POST" id="payment-forms" class="datpayment-form">
+      <div class="dpf-title">
+          Payment Details
+          <div class="accepted-cards-logo"></div>
+      </div>
+      <div class="dpf-card-placeholders"></div>
+      <div class="dpf-input-container">
+          <div class="dpf-input-row">
+              <label class="dpf-input-label">Debit Card Number</label>
+              <div class="dpf-input-container with-icon">
+                  <span class="dpf-input-icon"><i class="fa fa-credit-card" aria-hidden="true"></i></span>
+                  <input type="text" class="dpf-input" size="20" data-types="number">
+              </div>
+          </div>
+
+          <div class="dpf-input-row">
+              <div class="dpf-input-column">
+                  <input type="hidden" size="2" data-type="exp_month" placeholder="MM">
+                  <input type="hidden" size="2" data-type="exp_year" placeholder="YY">
+
+                  <label class="dpf-input-label">Expiry Date</label>
+                  <div class="dpf-input-container">
+                      <input type="text" class="dpf-input" data-types="expiry">
+                  </div>
+              </div>
+              <div class="dpf-input-column">
+                  <label class="dpf-input-label">CVV</label>
+                  <div class="dpf-input-container">
+                      <input type="text" class="dpf-input" size="4" data-types="cvc">
+                  </div>
+              </div>
+          </div>
+
+          <div class="dpf-input-row">
+              <label class="dpf-input-label">Card Holder Name</label>
+              <div class="dpf-input-container">
+                  <input type="text" size="4" class="dpf-input" data-types="name">
+              </div>
+          </div>
+
+          <button type="submit" class="dpf-submit">
+                  <span class="btn-active-state">
+                      Payment
+                  </span>
+                  <span class="btn-loading-state">
+                      <i class="fa fa-refresh "></i>
+                  </span>
+          </button>
+      </div>
+  </form>
+
+  
+  <pre id="demo-log"></pre> 
+
+</div>
+
+
+    <div class="filterDiv colors">
+      <div class="container">
+        <div class="wrapper">
+            <div class="payment">
+             <!---- <div class="payment-logo">
+                <p>p</p>
+              </div>--->
+              <h2>PayPal</h2>
+              <h5>Already Have A PayPal Account?</h5>
+              <h1 style="color: lightseagreen">Login</h1>
+              <div class="form">
+                <form action="#" method="POST"></form>
+                <div class="card space icon-relative">
+                  <label class="label"></label>
+                  <input type="text" class="input" placeholder="name@gmail.com">
+                 
+                </div>
+                <div class="card space icon-relative">
+                  <label class="label"></label>
+                  <input type="text" class="input" data-mask="" placeholder="password">
+                  
+                </div>
+                
+                <div class="btn1">
+                <button>Login</button>
+                </div> 
+                
+              </div>
+            </div>
+          </div>
+  
+    </div>
+  </div>
+
+
+<script>
+filterSelection("cars")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+<!----card script-->
+<script type="text/javascript" src="./DatPayment.js"></script>
+
+<script type="text/javascript">
+    var payment_form = new DatPayment({
+        form_selector: '#payment-form',
+        card_container_selector: '.dpf-card-placeholder',
+
+        number_selector: '.dpf-input[data-type="number"]',
+        date_selector: '.dpf-input[data-type="expiry"]',
+        cvc_selector: '.dpf-input[data-type="cvc"]',
+        name_selector: '.dpf-input[data-type="name"]',
+
+        submit_button_selector: '.dpf-submit',
+
+        placeholders: {
+            number: '•••• •••• •••• ••••',
+            expiry: '••/••',
+            cvc: '•••',
+            name: 'Card Holder Name'
+        },
+
+        validators: {
+            number: function(number){
+                return Stripe.card.validateCardNumber(number);
+            },
+            expiry: function(expiry){
+                var expiry = expiry.split(' / ');
+                return Stripe.card.validateExpiry(expiry[0]||0,expiry[1]||0);
+            },
+            cvc: function(cvc){
+                return Stripe.card.validateCVC(cvc);
+            },
+            name: function(value){
+                return value.length > 0;
+            }
+        }
+    });
+
+    var demo_log_div = document.getElementById("demo-log");
+
+    payment_form.form.addEventListener('payment_form:submit',function(e){
+        var form_data = e.detail;
+        payment_form.unlockForm();
+        demo_log_div.innerHTML += "<br>"+JSON.stringify(form_data);
+    });
+
+/*    payment_form.form.addEventListener('payment_form:field_validation_success',function(e){
+        var input = e.detail;
+
+        demo_log_div.innerHTML += "<br>field_validation_success:"+input.getAttribute("data-type");
+
+    });
+
+    payment_form.form.addEventListener('payment_form:field_validation_failed',function(e){
+        var input = e.detail;
+
+        demo_log_div.innerHTML += "<br>field_validation_failed:"+input.getAttribute("data-type");
+    });*/
+</script>
+
+<script type="text/javascript" src="./debit/DatPayment.js"></script>
+
+
+<script type="text/javascript">
+    var payment_form = new DatPayment({
+        form_selector: '#payment-forms',
+        card_container_selector: '.dpf-card-placeholders',
+
+        number_selector: '.dpf-input[data-types="number"]',
+        date_selector: '.dpf-input[data-types="expiry"]',
+        cvc_selector: '.dpf-input[data-types="cvc"]',
+        name_selector: '.dpf-input[data-types="name"]',
+
+        submit_button_selector: '.dpf-submit',
+
+        placeholders: {
+            number: '•••• •••• •••• ••••',
+            expiry: '••/••',
+            cvc: '•••',
+            name: 'Card Holder Name'
+        },
+
+        validators: {
+            number: function(number){
+                return Stripe.card.validateCardNumber(number);
+            },
+            expiry: function(expiry){
+                var expiry = expiry.split(' / ');
+                return Stripe.card.validateExpiry(expiry[0]||0,expiry[1]||0);
+            },
+            cvc: function(cvc){
+                return Stripe.card.validateCVC(cvc);
+            },
+            name: function(value){
+                return value.length > 0;
+            }
+        }
+    });
+
+    var demo_log_div = document.getElementById("demo-log");
+
+    payment_form.form.addEventListener('payment_form:submit',function(e){
+        var form_data = e.detail;
+        payment_form.unlockForm();
+        demo_log_div.innerHTML += "<br>"+JSON.stringify(form_data);
+    });
+
+/*    payment_form.form.addEventListener('payment_form:field_validation_success',function(e){
+        var input = e.detail;
+
+        demo_log_div.innerHTML += "<br>field_validation_success:"+input.getAttribute("data-type");
+
+    });
+
+    payment_form.form.addEventListener('payment_form:field_validation_failed',function(e){
+        var input = e.detail;
+
+        demo_log_div.innerHTML += "<br>field_validation_failed:"+input.getAttribute("data-type");
+    });*/
+</script>
+
+</body>
+</html>
